@@ -1,0 +1,53 @@
+.file-contet{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 80px;
+    bottom: 0;
+}
+.file-list{
+    position: absolute;
+    padding: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: auto;
+}
+.file-list::after{
+    clear:both
+}
+.file-item{
+    width: 150px;
+    height: 100px;
+    font-size: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 4px;
+    float: left;
+}
+.file-item:hover{
+    background: #03d1ff;
+}
+.file-item:hover span{
+    color: #fff;
+}
+.file-item span{
+    display: block;
+    color: #000;
+    text-align: center;
+}
+.file-item-icon{
+    color: #787878;
+    line-height: 70px;
+    font-size: 30px;
+}
+.file-item-name{
+    line-height: 30px;
+    font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 150px;
+    padding: 0 10px;
+}
