@@ -10,11 +10,11 @@ var TodoDom = React.createClass({
         return (
             <li >
                 {this.props.o.text}
-                <button onClick={this.props.delDom.bind(this, this.props.o)}>删除</button>
+                <button onClick={this.delItem}>删除</button>
                 <button onClick = {this.changeType}>改变状态</button>
                 <p>
                     <input type="text" onChange = {this.hanldChange} value={ this.state.value} />
-                    <button onClick={this.props.enit.bind(this,{text:this.state.value,id:this.props.o.id})}>确定</button>
+                    <button onClick={this.addItem}>确定</button>
                     <button>取消</button>
                 </p>
             </li>
@@ -31,6 +31,12 @@ var TodoDom = React.createClass({
         if(val.type=="active")val.type="no-active";
         else val.type="active";
         this.props.onchange(val);
+    },
+    delItem: function(){
+        this.props.delDom(this.props.o);
+    },
+    addItem: function(){
+        this.props.enit({text:this.state.value,id:this.props.o.id});
     }
 })
 

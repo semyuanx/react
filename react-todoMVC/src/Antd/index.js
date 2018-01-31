@@ -113,12 +113,12 @@ var antd = React.createClass({
             age:this.state.age,
             single:this.state.single
         }
-        ajax
-            .post(api)
-            .send(data)
-            .end(function(err,obj){
-                console.log(obj.body)
-            })
+        // ajax
+        //     .post(api)
+        //     .send(data)
+        //     .end(function(err,obj){
+        //         console.log(obj.body)
+        //     })
     },
     change(e,key){
         var val = e,
@@ -131,19 +131,24 @@ var antd = React.createClass({
         this.setState({
             loading:true
         })
-        ajax
-            .get(api)
-            .end(function(err,data){
-                if(err)return err;
-                var item = data.body.map(function(o,key){
-                    o.key = o.id
-                    return o;
-                })
-                _this.setState({
-                    items:item,
-                    loading:false
-                })
-            })
+        
+        this.setState({
+            items:[],
+            loading:false
+        })
+        // ajax
+        //     .get(api)
+        //     .end(function(err,data){
+        //         if(err)return err;
+        //         var item = data.body.map(function(o,key){
+        //             o.key = o.id
+        //             return o;
+        //         })
+        //         _this.setState({
+        //             items:item,
+        //             loading:false
+        //         })
+        //     })
     }
 })
 export default antd;

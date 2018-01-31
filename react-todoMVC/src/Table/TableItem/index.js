@@ -20,11 +20,11 @@ var tableItem = React.createClass({
         var bDom = bodyData.map(function(obj,i){
             var tds = arr.map(function(td,j){
                 return (
-                    <td >{obj[td]}</td>
+                    <td key={td}>{obj[td]}</td>
                 )
             })
             return (
-                <tr>{tds}</tr>
+                <tr key={i}>{tds}</tr>
             )
         })
         return (

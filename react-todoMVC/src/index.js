@@ -12,5 +12,5 @@ import Yunpan from './Yunpan/index.js'
 
 require('./index.css'); 
 
-ReactDOM.render(<Yunpan />, document.getElementById('root'));
+ReactDOM.render(<ReactRouter />, document.getElementById('root'));
 
